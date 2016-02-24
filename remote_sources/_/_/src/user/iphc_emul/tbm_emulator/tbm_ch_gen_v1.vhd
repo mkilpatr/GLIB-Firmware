@@ -422,7 +422,7 @@ begin
 					state								<= 8;
 					ch_word4b_TBM 					<= header_flag_i(3 downto 0);	
 					
-					if ROC_nb_i = std_logic_vector(to_unsigned(0,ROC_nb_i'length)) OR No_Token_Pass = '1' OR ROC_Dummy_Reset = '1' OR PKAM_zero = '1' then
+					if No_Token_Pass = '1' OR ROC_Dummy_Reset = '1' OR PKAM_zero = '1' then
 						s_state 						<= TT1;
 					else
 						PKAM_Token					<= '1';

@@ -527,7 +527,7 @@ architecture user_logic_arch of user_logic is
 	signal tbm_emul_v1_matrix_mode								: array_TBM_EMUL_NBxTBM_CH_NBx4b;
 	signal tbm_emul_v1_hit_data_mode								: array_TBM_EMUL_NBxTBM_CH_NBx4b;
 	--
-	signal tbm_emul_v1_ROC_nb										: array_TBM_EMUL_NBxTBM_CH_NBx4b;
+	signal tbm_emul_v1_ROC_nb										: array_TBM_EMUL_NBxTBM_CH_NBx4b := (TBM_EMUL_NB - 1 downto 0 => ( TBM_CH_NB - 1 => "1000"));
 	--
 	signal tbm_emul_v1_hit_nb										: array_TBM_EMUL_NBxTBM_CH_NBxROC_NB_MAXx4b;	
 	
