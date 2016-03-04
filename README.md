@@ -13,12 +13,12 @@
 --      xpoint1_clk3_p : in std_logic;
 --      xpoint1_clk3_n : in std_logic;
 --   uncomment and a bit modify a few lines in your user_fabric_clk.ucf file so they look like this:
---     NET "xpoint1_clk3_p"                                            LOC = A10                                                                        ; # IO_L1P_GC_34               
---     NET "xpoint1_clk3_n"                                            LOC = B10                                                                        ; # IO_L1N_GC_34                       
---     NET "xpoint1_clk3_p"                                            TNM_NET = "xpoint1_clk3_p"                                                       ;
---     NET "xpoint1_clk3_n"                                            TNM_NET = "xpoint1_clk3_n"                                                       ;
---     TIMESPEC TS_xpoint1_clk3_p =                    PERIOD "xpoint1_clk3_p" 24.95 ns HIGH 50 % INPUT_JITTER 100 ps                              
---     TIMESPEC TS_xpoint1_clk3_n =                    PERIOD "xpoint1_clk3_n" TS_xpoint1_clk3_p PHASE 12.475 ns HIGH 50 %                ;
+--     NET "xpoint1_clk3_p"                                            LOC = A10;  IO_L1P_GC_34               
+--     NET "xpoint1_clk3_n"                                            LOC = B10;  IO_L1N_GC_34                       
+--     NET "xpoint1_clk3_p"                                            TNM_NET = "xpoint1_clk3_p";
+--     NET "xpoint1_clk3_n"                                            TNM_NET = "xpoint1_clk3_n";
+--     TIMESPEC TS_xpoint1_clk3_p =                    PERIOD "xpoint1_clk3_p" 24.95 ns HIGH 50 % INPUT_JITTER 100 ps;
+--     TIMESPEC TS_xpoint1_clk3_n =                    PERIOD "xpoint1_clk3_n" TS_xpoint1_clk3_p PHASE 12.475 ns HIGH 50 %;
 --
 --For the data make sure you have these lines uncommented in the system.ucf (though I think they are available by default):
 --  NET "amc_port_rx_p[*]" LOC = ####;
