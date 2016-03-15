@@ -1,0 +1,14 @@
+# Output products list for <channelB_varDelay>
+channelB_varDelay.asy
+channelB_varDelay.gise
+channelB_varDelay.ngc
+channelB_varDelay.sym
+channelB_varDelay.vhd
+channelB_varDelay.vho
+channelB_varDelay.xco
+channelB_varDelay.xise
+channelB_varDelay\doc\c_shift_ram_v11_0_readme.txt
+channelB_varDelay\doc\c_shift_ram_v11_0_vinfo.html
+channelB_varDelay\doc\ds228_shift_ram.pdf
+channelB_varDelay_flist.txt
+channelB_varDelay_xmdf.tcl
