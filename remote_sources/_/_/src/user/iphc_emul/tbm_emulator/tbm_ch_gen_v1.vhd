@@ -55,7 +55,8 @@ port (			clk_i 							: in   std_logic;
 					PKAM_Enable						: in std_logic;
 					PKAM_Buffer						: out std_logic;
 					--PKAM_zero_Buffer				: out std_logic;
-					ROC_Timer_Buffer				: out std_logic;				
+					ROC_Timer_Buffer				: out std_logic;		
+					Event_Enable					: out std_logic;
 					ROC_Clk							: in std_logic_vector(7 downto 0);
 					--
 					trigger_i						: in std_logic;
@@ -318,6 +319,9 @@ begin
 	begin
 	wait until rising_edge(clk_i);	-- rising clock edge
 		--
+		if L1A_count = "00000000000000000000000000000000" then
+			TBM_Evn_count 							<= (others => '0');
+		end if;
 		if ROC_Reset = '1' then 
 			ROC_Constant							<= '1';
 			ROC_dummy_Reset						<= '1';
@@ -345,7 +349,7 @@ begin
 					PKAM_Token						<= '0';
 					Do_stack							<= '0';
 					No_Token_Pass					<= '0';
-					
+					Event_Enable					<= '0';					
 					if start_i = '1' and trigger_i = '1' and trigger_en_i = '1' and PKAM /= '1' then
 						L1A_stack_Evn				<= L1A_count(7 downto 0);
 						s_state 						<= TH1;
@@ -356,6 +360,7 @@ begin
 					state								<= 8;
 					Dummy_constant					<= '0';
 					ROC_Stack_Dummy				<= '0';
+					Event_Enable					<= '1';
 					ch_word4b_TBM 					<= x"7"; 
 					TBM_Evn_Count					<= std_logic_vector(unsigned(TBM_Evn_Count) + 1);
 					s_state 							<= TH2;
@@ -422,7 +427,7 @@ begin
 					state								<= 8;
 					ch_word4b_TBM 					<= header_flag_i(3 downto 0);	
 					
-					if ROC_nb_i = std_logic_vector(to_unsigned(0,ROC_nb_i'length)) OR No_Token_Pass = '1' OR ROC_Dummy_Reset = '1' OR PKAM_zero = '1' then
+					if No_Token_Pass = '1' OR ROC_Dummy_Reset = '1' OR PKAM_zero = '1' then --ROC_nb_i = std_logic_vector(to_unsigned(0,ROC_nb_i'length))
 						s_state 						<= TT1;
 					else
 						PKAM_Token					<= '1';
@@ -487,6 +492,7 @@ begin
 				when TT7 =>
 					state								<= 7;
 					TBM_dummy_reset				<= '0';
+					Event_Enable					<= '0';
 					if Stack_ROC = "000000" then
 						ch_word4b_TBM					<= Stack_count(3 downto 0);
 					else

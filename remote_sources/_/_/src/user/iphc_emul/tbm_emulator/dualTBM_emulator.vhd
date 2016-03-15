@@ -68,6 +68,7 @@ port (
 				PKAM_Constant							: in std_logic_vector(7 downto 0);
 				PKAM_Enable								: in std_logic;
 				PKAM_Buffer								: out std_logic;
+				Event_Enable							: out std_logic;
 				ROC_Timer_Buffer						: out std_logic;
 				ROC_Clk									: in std_logic_vector(7 downto 0);
 				--common
@@ -262,6 +263,7 @@ begin
 						PKAM_Constant				=> PKAM_Constant,
 						PKAM_Enable					=> PKAM_Enable,
 						PKAM_Buffer					=> PKAM_Buffer,
+						Event_Enable				=> Event_Enable,
 						ROC_Timer_Buffer			=> ROC_Timer_Buffer,
 						ROC_Clk						=> ROC_Clk,
 						--

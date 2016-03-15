@@ -16,11 +16,13 @@ package user_package is
 	
 	constant user_wb_glib_pix_emul_param	: integer  := 0 ;
 	constant user_wb_regs				: integer  := 1 ;
+
 --	constant user_wb_timer				: integer  := 1 ;    
 	
 	
 	--=== ipb slaves =============--
 	constant number_of_ipb_slaves		: positive := 6; --2 ;   TWN 3/8/2016  Was 4,  Change to 6
+
 	
 	constant ipb_vi2c_0                 : integer := 0;
    constant ipb_track_0                : integer := 1;
@@ -34,8 +36,6 @@ package user_package is
 	constant fmcfitel_i2c_ctrl_fifo_tx_sel	: integer  := 4 ;	 -- As in FC7 user_pkg  TWN 2/26/2016  -- ??? --
 	constant fmcfitel_i2c_ctrl_fifo_rx_sel	: integer  := 5 ;	 -- As in FC7 user_pkg  TWN 2/26/2016  -- ??? --
 		
-		
-	
 	--Matt added package types
 	
 	--=== Package types ==========--
@@ -57,8 +57,8 @@ package user_package is
     --=== Custom types ==========--
     
     type array192 is array(integer range <>) of std_logic_vector(191 downto 0);
+
     type array32 is array(integer range <>) of std_logic_vector(31 downto 0);
-	 
 	 
 	
 end user_package;

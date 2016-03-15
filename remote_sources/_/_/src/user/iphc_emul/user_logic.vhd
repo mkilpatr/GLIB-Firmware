@@ -286,13 +286,14 @@ architecture user_logic_arch of user_logic is
    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
 
+
    --=============================================================================================================================================--
 	-- RESET -- 
    --=============================================================================================================================================--
 	signal user_ipb_rst				 							: std_logic := '1';
    --=============================================================================================================================================--
 	-- END RESET -- 
-  
+
 
 	-- Global signals
 
@@ -319,7 +320,9 @@ architecture user_logic_arch of user_logic is
     signal request_tri          : std_logic_vector(127 downto 0) := (others => '0');
     signal request_read         : array32(127 downto 0) := (others => (others => '0'));
 
+
     -- Trigger --
+
 
     signal empty_trigger_fifo   : std_logic := '0';
     signal sbit_configuration   : std_logic_vector(2 downto 0) := (others => '0');
@@ -399,6 +402,7 @@ architecture user_logic_arch of user_logic is
    --=============================================================================================================================================--
 	-- END FMC8SFP I2C CTRL -- 
    --=============================================================================================================================================--
+
 
 
    --=============================================================================================================================================--
@@ -495,6 +499,7 @@ architecture user_logic_arch of user_logic is
    signal sw_rx_index_sel_en									: std_logic := '0';	
 
 
+
    --=============================================================================================================================================--
 	-- I/O Registers Mapping / Parameters List --
    --=============================================================================================================================================--
@@ -502,7 +507,9 @@ architecture user_logic_arch of user_logic is
 	signal glib_pix_emul_param_o 									: glib_pix_emul_param_type;	
 	signal glib_pix_emul_param_o_resync_clk_40_0				: glib_pix_emul_param_type;
 --	signal glib_pix_emul_param_o_resync_wr_clk				: glib_pix_emul_param_type;
---	signal glib_pix_emul_param_o_resync_rd_clk				: glib_pix_emul_param_typge;g
+
+--	signal glib_pix_emul_param_o_resync_rd_clk				: glib_pix_emul_param_type;
+
 	--
 	signal SW_TRIGGER_SEL 											: std_logic:='0';
 	signal SW_CMD_START 												: std_logic:='0';		
@@ -518,7 +525,9 @@ architecture user_logic_arch of user_logic is
    --=============================================================================================================================================--
 
 
+
    signal ipb_clk													: std_logic := '0';
+
    --=============================================================================================================================================--
 	-- CLOCKING -- 
    --=============================================================================================================================================--
@@ -558,11 +567,13 @@ architecture user_logic_arch of user_logic is
 	-- END CLOCKING -- 
    --=============================================================================================================================================--
 
+
    --==================================================================== 
 	--USER CONTROL & STATUS REGISTERS
 	--====================================================================
 	signal user_ctrl_reg												: std_logic_vector(31 downto 0);
 	signal user_stat_reg												: std_logic_vector(31 downto 0);	
+
 
 	
 	
@@ -627,7 +638,9 @@ architecture user_logic_arch of user_logic is
 	signal tbm_emul_v1_matrix_mode								: array_TBM_EMUL_NBxTBM_CH_NBx4b;
 	signal tbm_emul_v1_hit_data_mode								: array_TBM_EMUL_NBxTBM_CH_NBx4b;
 	--
-	signal tbm_emul_v1_ROC_nb										: array_TBM_EMUL_NBxTBM_CH_NBx4b;
+
+	signal tbm_emul_v1_ROC_nb										: array_TBM_EMUL_NBxTBM_CH_NBx4b := ( TBM_Emul_NB-1 downto 0 => ( TBM_CH_NB-1 downto 0 => "1000"));
+
 	--
 	signal tbm_emul_v1_hit_nb										: array_TBM_EMUL_NBxTBM_CH_NBxROC_NB_MAXx4b;	
 	
@@ -637,6 +650,9 @@ architecture user_logic_arch of user_logic is
 	signal PKAM_Enable												: std_logic := '0';
 	signal PKAM_Buffer												: std_logic := '0';
 	signal ROC_Timer_Buffer											: std_logic := '0';
+
+	signal Event_Enable												: std_logic := '0';
+
 	signal ROC_Clk														: std_logic_vector(7 downto 0) := (others => '0');
 	--
 	signal tbm_emul_v1_dcol											: array_TBM_EMUL_NBxTBM_CH_NBxROC_NB_MAXx6b;
@@ -661,6 +677,9 @@ architecture user_logic_arch of user_logic is
 
 	signal int_trigger												: std_logic:='0';
 	signal user_reset													: std_logic:='1';	
+
+	signal reset_user													: std_logic := '0';
+
 
 
 	
@@ -691,6 +710,9 @@ begin-- ARCHITECTURE
 
 	user_v6_led_o(1) <= l1_led;
    user_v6_led_o(2) <= bc0_led;
+
+	--reset_i			  <= reset_user;
+
 	
 
     --fmc1_io_pin.la_p(10) <= ext_sbit;
@@ -841,8 +863,8 @@ begin-- ARCHITECTURE
     -- Empty trigger fifo
 
     empty_trigger_fifo <= request_tri(0);
-    -- S Bits configuration : 0 -- read / write _ Controls the Sbits to send to the TDC
 
+    -- S Bits configuration : 0 -- read / write _ Controls the Sbits to send to the TDC
 
     sbit_configuration_reg : entity work.reg port map(fabric_clk_i => ipb_clk_i, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));
     sbit_configuration <= request_read(1)(2 downto 0);
@@ -857,7 +879,9 @@ begin-- ARCHITECTURE
 	--==================================
 	generic map
 	(
+
 ------		fmc_la_io_settings		=> func_fmc_la_settings(fmc2_j1_type), --fmc2_j1_la_io_settings, --see pkg_glib_pix_emul
+
 		fmc_ha_io_settings		=> fmc_ha_io_settings_defaults, 			--see fmc_package
 		fmc_hb_io_settings		=> fmc_hb_io_settings_defaults
 	)
@@ -1057,8 +1081,9 @@ begin-- ARCHITECTURE
 		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_n_oe_l(14) 		<= '0';
 		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_n(14) 				<= tbm_chB_word4b_sync40M(3);
 			
---		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_p_oe_l(15)		<= '0';
---		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_p(15) 	<= Test_Reset;
+
+		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_p_oe_l(15)			<= '0';
+		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_p(15) 				<= Event_Enable;
 --		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_n_oe_l(15)		<= '0';
 --		fmc_from_fabric_to_pin_array(fmc1_j2).ha_cmos_n(15) 	<= Test2_Reset;
 --		
@@ -1073,6 +1098,7 @@ begin-- ARCHITECTURE
 
 	io_fmc1_j2_fmc8sfp_used_gen : if fmc1_j2_type = "fmc8sfp" generate 
 		-->IN / RX / CTRL
+
 			--from A     (Not anymore)   
 			rx_clk_in							<= xpoint1_clk3_bufg; 		--fmc_from_pin_to_fabric_array(fmc1_j2).la_lvds(1);	(Not anymore)		
 			--from B     (Not anymore)
@@ -1091,6 +1117,7 @@ begin-- ARCHITECTURE
 --			fmc_from_fabric_to_pin_array(fmc1_j2).la_lvds_oe_l(4) 	<= '0';--EN	
 			--> Normal
 --			--to A
+
 			process         -- I DON'T THINK SEPARATE PROCESS STATEMENTS ARE ACTUALLY NEEDED - TWN 2/23/2016
 			begin
 			wait until rising_edge(clk_400_0);
@@ -1148,6 +1175,7 @@ begin-- ARCHITECTURE
 			end process;	
 			fmc_from_fabric_to_pin_array(fmc1_j2).la_lvds_oe_l(16) 	<= '0';--EN				
 	end generate;
+
 
 
 ---Added TBM Emulator serial data out to Fitel TX  pin mapping   TWN 2/23/2016
@@ -1221,6 +1249,7 @@ begin-- ARCHITECTURE
 				end process;
   
   end generate;
+
 
 	
 	io_fmc1_j2_i2c_fmc8sfp_gen : if fmc1_j2_type = "fmc8sfp" generate
@@ -1310,7 +1339,6 @@ begin-- ARCHITECTURE
 			sda_oe_l(1)					=> open		
 		);
 	end generate;
-
 
 
 
@@ -1563,10 +1591,12 @@ begin-- ARCHITECTURE
    --=============================================================================================================================================--
 
 
+
 	
    --=============================================================================================================================================--
 	-- END FMC1_J2 I/O Mapping --
    --=============================================================================================================================================-
+
 
 
 -- START IMPLEMENT USER CONTROL & STATUS REGISTERS FOR FITEL:
@@ -1626,6 +1656,7 @@ begin-- ARCHITECTURE
 -- END IMPLEMENT USER CONTROL & STATUS REGISTERS FOR FITEL
 
 
+
    --=============================================================================================================================================--
 	-- I/O Registers Mapping / Parameters List --
    --=============================================================================================================================================--
@@ -1663,18 +1694,22 @@ begin-- ARCHITECTURE
 		wait until rising_edge(wb_mosi_i(user_wb_glib_pix_emul_param).wb_clk);
 			--> USER ASCII CODES (stored into user_glib_fec_package.vhd)
 			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 00) 							<= USER_IPHC_ASCII_WORD_01;	
-			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 01) 							<= USER_IPHC_ASCII_WORD_02;	
+			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 01) 							<= USER_IPHC_ASCII_WORD_02;
+			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 02)							<= USER_RICE_ASCII_WORD_01;
+			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 03)							<= USER_RICE_ASCII_WORD_02;
 			--> USER IPHC FIRMWARE VERSION
-			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 02) 							<= std_logic_vector(to_unsigned(USER_IPHC_FW_VER_YEAR  ,7)) &
-																								std_logic_vector(to_unsigned(USER_IPHC_FW_VER_MONTH ,4)) &
-																								std_logic_vector(to_unsigned(USER_IPHC_FW_VER_DAY   ,5)) &
-																								std_logic_vector(to_unsigned(USER_IPHC_ARCHI_VER_NB ,8)) &																	
-																								std_logic_vector(to_unsigned(USER_IPHC_FW_VER_NB    ,8));
+			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 04) 							<= std_logic_vector(to_unsigned(USER_RICE_FW_VER_YEAR  ,7)) &
+																								std_logic_vector(to_unsigned(USER_RICE_FW_VER_MONTH ,4)) &
+																								std_logic_vector(to_unsigned(USER_RICE_FW_VER_DAY   ,5)) &
+																								std_logic_vector(to_unsigned(USER_RICE_ARCHI_VER_NB ,8)) &																	
+																								std_logic_vector(to_unsigned(USER_RICE_FW_VER_NB    ,8));
+
 
 			
 	
 			--> ACQ PARAMETERS
 	
+
 
 			glib_pix_emul_param_i(RD_PARAM_ADDR_0 + 03)							<= std_logic_vector(to_unsigned(0,28)) & mmcm2_lock & mmcm1_lock & user_cdce_sync & user_cdce_sel;
 
@@ -1695,6 +1730,7 @@ begin-- ARCHITECTURE
 
 
 	--=======================================--  
+
 	-- PARAM CTRL & CMD / Rd/Wr
 	--=======================================--
 ----	process 
@@ -1714,6 +1750,7 @@ begin-- ARCHITECTURE
 	SW_TBM_EMUL_TYPE 									<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 00)(15 downto 12);--4b	
 	SW_TBM_EMUL_NB 									<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 00)(21 downto 16); --6b	
 	SW_SAME_CONFIG_ALL_EMUL							<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 00)(25); --or by def if SW_TBM_EMUL_NB > 1
+
 
 
 --01 : reserved      ---for What?  TWN  3/10/2016
@@ -1736,7 +1773,10 @@ begin-- ARCHITECTURE
 	--==============--
    -- EMUL CONTROL --b
    --==============--	
-	--TBM0g0 + 02)(3 downto 0);--4-bit
+
+	--TBM0
+	tbm_emul_v1_ROC_nb(0)(chA)						<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 02)(3 downto 0);--4-bit
+
 	tbm_emul_v1_ROC_nb(0)(chB)						<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 02)(7 downto 4);--4-bit		
 	--
 	tbm_emul_v1_hit_nb_ROC_mode(0)(chA)			<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 02)(11 downto 8);--4-bit
@@ -1776,6 +1816,7 @@ begin-- ARCHITECTURE
 --	Stack_count(chB)(5 downto 0)					<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 04)(21 downto 16);
 	
 	tbm_chB_delaying(0)								<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 03)(31 downto 24);	--8-bit	
+
 	--tbm_chB_delaying(0)								<= std_logic_vector(to_unsigned(0,8));--8-bit	
 	
 	--
@@ -1809,14 +1850,13 @@ begin-- ARCHITECTURE
 	tbm_emul_v1_hit_nb(0)(1)(6)				<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 22 )(27 downto 24);--4-bit
 	tbm_emul_v1_hit_nb(0)(1)(7)				<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 22 )(31 downto 28);--4-bit
 	
-	tbm_emul_v1_reset								<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 23 )(0);
+
+	reset_user										<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 23 )(0); --used to be tbm_emul_v1_reset
 	PKAM_Reset_v1									<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 24 )(7 downto 0);--8 bit
 	PKAM_Constant									<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 24 )(15 downto 8);--5 bit
 	PKAM_Enable										<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 24 )(16);--1 bit
 	ROC_Clk											<= glib_pix_emul_param_o_resync_clk_40_0(WR_PARAM_ADDR_0 + 25 )(7 downto 0); --8 bit
 	
-
-			
 
 --	data_roc_gen : for i_roc in 0 to 7 generate
 --		data_ch_gen : for i_ch in 0 to 1 generate

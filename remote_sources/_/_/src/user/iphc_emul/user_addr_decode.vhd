@@ -40,14 +40,16 @@ package body user_addr_decode is
 		
 		return sel;
 	end user_ipb_addr_sel;
-	
+
 
    function user_wb_addr_sel(signal addr : in std_logic_vector(31 downto 0)) return integer is
 		variable sel : integer;
    begin
 		--              addr, "00------------------------------" is reserved (system ipbus fabric)
 		--              addr, "01------------------------------" is reserved (user ipbus fabric)
-		if		std_match(addr, "10000000000000000000000000------") then  	sel := user_wb_glib_pix_emul_param; 	--see user_package.vhd / just 32 @ are reserved
+
+		if		std_match(addr, "100000000000000000000000--------") then  	sel := user_wb_glib_pix_emul_param; 	--see user_package.vhd / just 32 @ are reserved
+
 		---->BASE_ADDR = x"80000000"
 		
 		elsif std_match(addr, "100100000000000000000000--------") then  	sel := user_wb_regs; --0x900000XX

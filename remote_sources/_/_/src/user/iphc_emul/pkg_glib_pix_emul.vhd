@@ -78,23 +78,26 @@ package pkg_glib_pix_emul is
 	type array_TBM_EMUL_NBx8b											is array(TBM_EMUL_NB-1 downto 0) of std_logic_vector(7 downto 0);		
 	type array_TBM_EMUL_NBx2b											is array(TBM_EMUL_NB-1 downto 0) of std_logic_vector(1 downto 0);	
 
+
    type array_Nx2b 									    				is array(natural range <>) of std_logic_vector(1 downto 0);
+
 	--=======================================--
 	-- VERSIONING
 	--=======================================--
 	-->From IPHC
 	--ASCII CODES
 	constant USER_IPHC_ASCII_WORD_01									: std_logic_vector(31 downto 0)	:= x"50_49_58_20"; -- 'P I X  '	
-	constant USER_IPHC_ASCII_WORD_02									: std_logic_vector(31 downto 0)	:= x"45_4D_55_4C"; -- 'E M U L '		
+	constant USER_IPHC_ASCII_WORD_02									: std_logic_vector(31 downto 0)	:= x"45_4D_55_4C"; -- 'E M U L '	
+	constant USER_RICE_ASCII_WORD_01									: std_logic_vector(31 downto 0)  := x"46_45_44_20"; -- 'F E D  '
+	constant USER_RICE_ASCII_WORD_02									: std_logic_vector(31 downto 0)  := x"54_65_73_74"; -- 'T E S T '
 	--FW VER
-	constant USER_IPHC_FW_VER_YEAR									: integer range 0 to 99 			:= 15; 	--7b
-	constant USER_IPHC_FW_VER_MONTH									: integer range 0 to 12 			:= 08;	--4b
-	constant USER_IPHC_FW_VER_DAY  									: integer range 0 to 31 			:= 17;	--5b
-	constant USER_IPHC_ARCHI_VER_NB  								: integer range 0 to 2**8-1 		:= 1;		--8b	
+	constant USER_RICE_FW_VER_YEAR									: integer range 0 to 99 			:= 16; 	--7b
+	constant USER_RICE_FW_VER_MONTH									: integer range 0 to 12 			:= 03;	--4b
+	constant USER_RICE_FW_VER_DAY  									: integer range 0 to 31 			:= 11;	--5b
+	constant USER_RICE_ARCHI_VER_NB  								: integer range 0 to 2**8-1 		:= 1;		--8b	
 	--x"01" : 1 TBM output 
-	constant USER_IPHC_FW_VER_NB  									: integer range 0 to 2**8-1 		:= 1;		--8b	
+	constant USER_RICE_FW_VER_NB  									: integer range 0 to 2**8-1 		:= 120;		--8b	
 	
-
 
 	--=======================================--
 	-- ARCHITECTURE - CONSTANTS
@@ -120,7 +123,7 @@ package pkg_glib_pix_emul is
 	--==========================================================--
 	-- PARAMETERS LIST - I/O REGISTERS STORED INTO A MEMORY MAP --
 	--==========================================================--
-	constant glib_pix_emul_param_width 								: natural := 6; --2^6 = 64 x 32bit-words	
+	constant glib_pix_emul_param_width 								: natural := 7; --2^7 = 128 x 32bit-words	
 	constant glib_pix_emul_param_depth 								: natural := 2**(glib_pix_emul_param_width); --2^6 = 64 x 32b-words	
 	type glib_pix_emul_param_type 									is array (glib_pix_emul_param_depth-1 downto 0) of std_logic_vector(31 downto 0);	
 	constant RD_PARAM_NB													: integer	:= 16;
@@ -130,7 +133,6 @@ package pkg_glib_pix_emul is
 	signal glib_pix_emul_param_o 										: glib_pix_emul_param_type;	
 	signal glib_pix_emul_param_o_resync_40M						: glib_pix_emul_param_type;
 
-	--
 
 	--=========================--
 	-- FMC IO TYPE DECLARATION --

@@ -5,10 +5,10 @@
 <!--     behavior or data corruption.  It is strongly advised that -->
 <!--     users do not edit the contents of this file.              -->
 <!--                                                               -->
-<!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/tednuss/Documents/Pixel/GLIB_Stack-PKAM/remote_sources/_/_/src/user/iphc_emul/tbm_emulator/ipcore/row/row_bin2base6.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/pix_emul_glib3/src/user/iphc_emul/tbm_emulator/ipcore/row/row_bin2base6.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
