@@ -1,0 +1,2 @@
+vhdl work ../../mmcm1_320in.vhd
+vhdl work ../example_design/mmcm1_320in_exdes.vhd

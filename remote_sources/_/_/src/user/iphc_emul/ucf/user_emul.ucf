@@ -1,0 +1,7 @@
+#rx_clk_in via fmcdio5
+#NET "fmc2_la_p<33>" CLOCK_DEDICATED_ROUTE = FALSE; #-> if bufg
+
+#rx_clk_in via fmc8sfp
+NET "fmc1_la_p<1>" CLOCK_DEDICATED_ROUTE = FALSE; #-> if bufg
+			
+

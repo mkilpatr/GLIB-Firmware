@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="glib_v3_pix_emul" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/UDP_if - flat C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|ip_com|ipbus|ipbus_2_0_v1|firmware|ipbus_core|hdl|udp_if_flat.vhd</ClosedNode>
+         <ClosedNode>/UDP_if - flat C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|udp_if_flat.vhd</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/system - system_core - mixed_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/user_addr_decode</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/user_addr_decode/user_addr_decode/user_package</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/user_addr_decode/user_package</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/dualTBM_emulator_inst - dualTBM_emulator - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc1_j2_map - fmc_io_buffers - fmc_io_buffers_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc2_j1_map - fmc_io_buffers - fmc_io_buffers_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc_8sfp_i2c_ctrl_inst - i2c_master_core_v2 - hierarchy</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/gtx_wrapper_inst - gtx_wrapper - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_0_inst - link_tracking - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_0_inst - link_tracking - Behavioral/ipb_registers_inst - ipb_registers - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_0_inst - link_tracking - Behavioral/ipb_tracking_inst - ipb_tracking - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_0_inst - link_tracking - Behavioral/ipb_vi2c_inst - ipb_vi2c - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_1_inst - link_tracking - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_2_inst - link_tracking - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_2_inst - link_tracking - Behavioral/ipb_registers_inst - ipb_registers - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_2_inst - link_tracking - Behavioral/ipb_tracking_inst - ipb_tracking - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_2_inst - link_tracking - Behavioral/ipb_vi2c_inst - ipb_vi2c - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_trigger_inst - link_trigger - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_trigger_inst - link_trigger - Behavioral/ipb_trigger_inst - ipb_trigger - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/system - system_core - mixed_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/dualTBM_emulator_inst - dualTBM_emulator - Behavioral/tbm_ch_gen_v1_inst_chA - tbm_ch_gen_v1 - Behavioral/ROC_ch_gen_v1_inst - ROC_ch_gen_v1 - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/dualTBM_emulator_inst - dualTBM_emulator - Behavioral/tbm_ch_gen_v1_inst_chB - tbm_ch_gen_v1 - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/dualTBM_emulator_inst - dualTBM_emulator - Behavioral/tbm_ch_gen_v1_inst_chB - tbm_ch_gen_v1 - Behavioral/ROC_ch_gen_v1_inst - ROC_ch_gen_v1 - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc1_j2_map - fmc_io_buffers - fmc_io_buffers_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc2_j1_map - fmc_io_buffers - fmc_io_buffers_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc_8sfp_i2c_ctrl_inst - i2c_master_core_v2 - hierarchy</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/gtx_wrapper_inst - gtx_wrapper - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_0_inst - link_tracking - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/system - system_core - mixed_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/dualTBM_emulator_inst - dualTBM_emulator - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc1_j2_map - fmc_io_buffers - fmc_io_buffers_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc2_j1_map - fmc_io_buffers - fmc_io_buffers_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/fmc_8sfp_i2c_ctrl_inst - i2c_master_core_v2 - hierarchy</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/gtx_wrapper_inst - gtx_wrapper - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|pix_emul_glib3|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_tracking_0_inst - link_tracking - Behavioral</ClosedNode>
+         <ClosedNode>/ipb_registers - rtl C:|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|GLIB-master|amc_glib|trunk|glib_v3|fw|fpga|prj|glib_fw|src|ipb_registers.vhd</ClosedNode>
+         <ClosedNode>/ipb_tracking - rtl C:|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|GLIB-master|amc_glib|trunk|glib_v3|fw|fpga|prj|glib_fw|src|ipb_tracking.vhd</ClosedNode>
+         <ClosedNode>/ipb_vi2c - rtl C:|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|GLIB-master|amc_glib|trunk|glib_v3|fw|fpga|prj|glib_fw|src|ipb_vi2c.vhd</ClosedNode>
+         <ClosedNode>/ipbus_ctrl - rtl C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|ip_com|ipbus|ipbus_2_0_v1|firmware|ipbus_core|hdl|ipbus_ctrl.vhd</ClosedNode>
+         <ClosedNode>/ipbus_ctrl - rtl C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|ipbus_ctrl.vhd</ClosedNode>
+         <ClosedNode>/link_tracking - Behavioral C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|GLIB-master|amc_glib|trunk|glib_v3|fw|fpga|prj|glib_fw|src|link_tracking.vhd</ClosedNode>
+         <ClosedNode>/link_trigger - Behavioral C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|GLIB-master|amc_glib|trunk|glib_v3|fw|fpga|prj|glib_fw|src|link_trigger.vhd</ClosedNode>
+         <ClosedNode>/stretcher - rtl C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|ip_com|ipbus|ipbus_2_0_v1|firmware|ipbus_core|hdl|stretcher.vhd</ClosedNode>
+         <ClosedNode>/stretcher - rtl C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|stretcher.vhd</ClosedNode>
+         <ClosedNode>/transactor - rtl C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|ip_com|ipbus|ipbus_2_0_v1|firmware|ipbus_core|hdl|transactor.vhd</ClosedNode>
+         <ClosedNode>/transactor - rtl C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|transactor.vhd</ClosedNode>
+         <ClosedNode>/ttc - Behavioral C:|Users|Matthew Kilpatrick|Desktop|pix_emul_glib3|prj_iphc_strasbourg|glib_v3|GLIB-master|amc_glib|trunk|glib_v3|fw|fpga|prj|glib_fw|src|ttc.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>glib_top - glib_top_arch (C:/Users/pix_emul_glib3/src/system/sys/glib_top.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000002b90000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>glib_top - glib_top_arch (C:/Users/pix_emul_glib3/src/system/sys/glib_top.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Generate Programming File</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000105000000010000000100000000000000000000000064ffffffff000000810000000000000001000001050000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Generate Programming File</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>wb_package.vhd</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >147</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002a2000000040101000100000000000000000000000064ffffffff000000810000000000000004000000d90000000100000000000000d700000001000000000000006600000001000000000000008c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>wb_package.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>clock_bridge_simple.vhd</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>clock_bridge_simple.vhd</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000148000000010000000100000000000000000000000064ffffffff000000810000000000000001000001480000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000127000000010000000100000000000000000000000064ffffffff000000810000000000000001000001270000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000014f0000016d01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000127000000010000000100000000000000000000000064ffffffff000000810000000000000001000001270000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000148000000010000000100000000000000000000000064ffffffff000000810000000000000001000001480000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_CDC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|pix_emul_glib3|src|system|sys|glib_top.vhd</ClosedNode>
+         <ClosedNode>/tb_dcol_counter - behavior C:|Users|pix_emul_glib3|src|user|iphc_emul|tbm_emulator|tb|tb_dcol_counter.vhd</ClosedNode>
+         <ClosedNode>/tb_encoder4b5bNRZI_serialiser - behavior C:|Users|pix_emul_glib3|src|user|iphc_emul|tbm_emulator|tx|tb|tb_encoder4b5bNRZI_serialiser.vhd</ClosedNode>
+         <ClosedNode>/tb_row_counter - behavior C:|Users|pix_emul_glib3|src|user|iphc_emul|tbm_emulator|tb|tb_row_counter.vhd</ClosedNode>
+         <ClosedNode>/tb_tbm_ch_gen_v1 - behavior C:|Users|pix_emul_glib3|src|user|iphc_emul|tbm_emulator|tb|tb_tbm_ch_gen_v1.vhd/tbm_ch_gen_v1_uut - tbm_ch_gen_v1 - Behavioral</ClosedNode>
+         <ClosedNode>/tb_tbm_ch_gen_v1 - behavior C:|Users|pix_emul_glib3|src|user|iphc_emul|tbm_emulator|tb|tb_tbm_ch_gen_v1.vhd/tbm_ch_gen_v1_uut - tbm_ch_gen_v1 - Behavioral/ROC_ch_gen_v1_inst - ROC_ch_gen_v1 - Behavioral</ClosedNode>
+         <ClosedNode>/tb_tbm_ch_gen_v2 - behavior C:|Users|pix_emul_glib3|src|user|iphc_emul|tbm_emulator|tb|tb_tbm_ch_gen_v2.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>tracking_data_fifo (C:/Users/pix_emul_glib3/prj_iphc_strasbourg/glib_v3/GLIB-master/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/ipcore_dir/tracking_data_fifo.xco)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e0000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e00000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>tracking_data_fifo (C:/Users/pix_emul_glib3/prj_iphc_strasbourg/glib_v3/GLIB-master/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/ipcore_dir/tracking_data_fifo.xco)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>
